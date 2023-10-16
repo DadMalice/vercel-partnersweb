@@ -3,7 +3,7 @@ import partnersP from '../../assets/Partners_P.png';
 import { BiCalendarCheck } from 'react-icons/bi';
 
 const MOBILE_BREAKPOINT = 640;
-const MOBILE_BREAKPOINT2 = 950;
+const MOBILE_BREAKPOINT2 = 768;
 
 function MobileView({ appointmentLink }) {
     return (
@@ -19,16 +19,17 @@ function DesktopView({ appointmentLink }) {
     return (
         <button
             type="button"
-            className="relative inline-flex w-full items-center justify-center rounded-md p-2 mt-0 text-black hover:bg-green-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white font-medium cursor-pointer transition-transform transform hover:scale-105"
+            className={`relative inline-flex items-center justify-center rounded-md p-2 mt-0 text-black hover:bg-green-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white font-medium cursor-pointer transition-transform transform hover:scale-105 ${window.innerWidth >= MOBILE_BREAKPOINT2 ? 'whitespace-nowrap' : ''
+                }`}
             style={{ border: "3px solid green", padding: "10px 20px" }}
         >
             <span className="sr-only">Request Appointment</span>
             Request Appointment
         </button>
-
-
     );
 }
+
+
 
 const Navbar = () => {
     const isMobileView = window.innerWidth <= MOBILE_BREAKPOINT;

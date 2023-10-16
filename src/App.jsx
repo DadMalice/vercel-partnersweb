@@ -18,6 +18,7 @@ function App() {
       <TopHeader />
       <Navbar />
       <Home />
+      <Footer />
     </div>
   );
 }

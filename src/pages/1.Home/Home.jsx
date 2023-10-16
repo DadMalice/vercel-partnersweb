@@ -7,7 +7,7 @@ import ContactForm from '../../components/ContactForm';
 
 const Home = () => {
     return (
-        <section className='mt-20 mb-10 lg:mx-0 lg:px-0'>
+        <section className='mt-20 mb-0 lg:mx-0 lg:px-0'>
             <motion.div
                 className="home"
                 initial={{ opacity: 0 }}
