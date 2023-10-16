@@ -9,7 +9,7 @@ const MOBILE_BREAKPOINT2 = 950;
 
 const navigation = [
     { name: 'Home', href: '/', current: false },
-    { name: 'About', href: '/about', current: false },
+    { name: 'About', href: '/#/about', current: false },
     { name: 'Services', href: '/services', current: false },
     { name: 'FAQs', href: '/faqs', current: false },
     { name: 'Testimonials', href: '/testimonials', current: false },
