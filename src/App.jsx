@@ -13,23 +13,11 @@ import TopHeader from './components/Header/TopHeader';
 
 function App() {
   return (
+
     <div>
-      <Router>
-        <TopHeader />
-        <Navbar />
-
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route exact path='/about' element={<About />} />
-          <Route exact path='/services' element={<Services />} />
-          <Route exact path='/faqs' element={<FAQs />} />
-          <Route exact path='/testimonials' element={<Testimonials />} />
-          <Route exact path='/contact' element={<Contact />} />
-          <Route path="/terms" element={<Terms />} />
-        </Routes>
-
-        <Footer />
-      </Router>
+      <TopHeader />
+      <Navbar />
+      <Home />
     </div>
   );
 }

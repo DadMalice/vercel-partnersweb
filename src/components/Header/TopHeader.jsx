@@ -17,9 +17,9 @@ const TopHeader = () => {
     ];
 
     return (
-        <div className="top-header mx-auto pt-3 max-w-8xl px-2 sm:px-6 lg:px-8">
-            <div className="flex gap-3 flex-wrap collapse md:visible xs:justify-end mx-2">
-                <ul className="flex flex-wrap gap-2 md:gap-8 justify-center text-center">
+        <div className="top-header mx-auto pt-4 max-w-8xl px-2 sm:px-6 lg:px-8 bg-white">
+            <div className="flex gap-3 flex-wrap invisible md:visible justify-center xs:justify-end mx-2 ">
+                <ul className="flex flex-wrap gap-2 md:gap-10 justify-center text-center">
                     {items.map(({ icon, description, locationLink, phoneLink }, index) => {
                         const content = locationLink ? (
                             <a href={locationLink} target="_blank" rel="noopener noreferrer">

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 const About = () => {
     return (
         <motion.div
+            id='about-section'
             className="about-us"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
