@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import partnersP from '../../assets/Partners_P.png';
 import { BiCalendarCheck } from 'react-icons/bi';
+import { Link } from 'react-scroll';
 
 const MOBILE_BREAKPOINT = 640;
 const MOBILE_BREAKPOINT2 = 768;
@@ -76,19 +77,13 @@ const Navbar = () => {
                     <img className="h-12 mr-3" src={partnersP} alt="Partners Hospice Quality Care LLC" />
                     <ul className="hidden md:flex px-4 mt-5 font-semibold font-heading space-x-5">
                         <li>
-                            <a className="hover:text-green-800" href="#">
-                                Home
-                            </a>
+                            <Link className="hover:text-green-800" to="home-section" spy={true} smooth={true} offset={-100} duration={500} style={{ cursor: 'pointer' }}>Home</Link>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="#">
-                                About
-                            </a>
+                            <Link className="hover:text-green-800" to="about-section" spy={true} smooth={true} offset={-100} duration={500} style={{ cursor: 'pointer' }}>About</Link>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="#">
-                                Services
-                            </a>
+                            <Link className="hover:text-green-800" to="services-section" spy={true} smooth={true} offset={-100} duration={500} style={{ cursor: 'pointer' }}>Services</Link>
                         </li>
                         <li>
                             <a className="hover:text-green-800" href="#">
@@ -101,33 +96,25 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="#">
-                                Contact
-                            </a>
+                            <Link className="hover:text-green-800" to="contactform-section" spy={true} smooth={true} offset={50} duration={500} style={{ cursor: 'pointer' }}>Contact</Link>
                         </li>
                     </ul>
                 </div>
                 <div className={`flex pr-8 py-3 pb-4 w-auto justify-end`}>
                     <DesktopView appointmentLink="/appointment-link" />
                 </div>
-            </nav>
+            </nav >
             {isMobileView && menuOpen && (
                 <div className="mobile-menu">
                     <ul className="md:hidden flex flex-col mb-4 px-4 mx-auto font-semibold font-heading space-y-3">
                         <li>
-                            <a className="hover:text-green-800" href="#">
-                                Home
-                            </a>
+                            <Link className="hover:text-green-800" to="home-section" spy={true} smooth={true} offset={-100} duration={500} style={{ cursor: 'pointer' }}>Home</Link>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="#">
-                                About
-                            </a>
+                            <Link className="hover:text-green-800" to="about-section" spy={true} smooth={true} offset={-100} duration={500} style={{ cursor: 'pointer' }}>About</Link>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="#">
-                                Services
-                            </a>
+                            <Link className="hover:text-green-800" to="services-section" spy={true} smooth={true} offset={-100} duration={500} style={{ cursor: 'pointer' }}>Services</Link>
                         </li>
                         <li>
                             <a className="hover:text-green-800" href="#">
@@ -140,14 +127,12 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="#">
-                                Contact
-                            </a>
+                            <Link className="hover:text-green-800" to="contactform-section" spy={true} smooth={true} offset={50} duration={500} style={{ cursor: 'pointer' }}>Contact</Link>
                         </li>
                     </ul>
                 </div>
             )}
-        </div>
+        </div >
     );
 };
 

@@ -4,17 +4,18 @@ import { Link as ScrollLink } from 'react-scroll';
 import herohands from '../../assets/hero-hands.jpg';
 import { BiHeart, BiBandAid, BiSmile } from "react-icons/bi";
 import ContactForm from '../../components/ContactForm';
+import Services from '../3.Services/Services';
 
 const Home = () => {
     return (
         <section className='mt-20 mb-0 lg:mx-0 lg:px-0'>
             <motion.div
-                className="home"
+                className="home-section"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
             >
-                <div className="relative flex flex-col-reverse pt-16 lg:pt-0 lg:flex-col lg:pb-10">
+                <div id="home-section1" className="relative flex flex-col-reverse pt-16 lg:pt-0 lg:flex-col lg:pb-10">
                     <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-2xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
                         <svg
                             className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
@@ -49,7 +50,7 @@ const Home = () => {
 
                 </div>
 
-                <div className='grid gap-8 mx-3 px-2 mb-5 pb-1 py-10 xl:grid-cols-2 lg:mx-20 xs:mx-10 xs:px-0 md:items-start md:text-left bg-gree'>
+                <div id='about-section' className='grid gap-8 mx-3 px-2 mb-5 pb-1 py-10 xl:grid-cols-2 lg:mx-20 xs:mx-10 xs:px-0 md:items-start md:text-left bg-gree'>
                     <div className='max-w md:max-l'>
                         <h1 className='mb-10 text-center md:text-center font-sans lg:text-6xl xs:text-5xl text-4xl font-bold tracking-tight text-gray-900'>Partners Hospice Quality Care</h1>
                         <p className='text-justify mb-5 text-gray-700'>
@@ -113,7 +114,12 @@ const Home = () => {
                     </div>
                 </div>
 
+                <div id='services-section'>
+                    <Services />
+                </div>
+
                 <div
+                    id="contactform-section"
                     className="relative bg-cover bg-center bg-image-url p-5 md:p-10"
                     style={{ backgroundImage: "url('https://img.freepik.com/free-photo/female-patients-talking-hospital_23-2148981276.jpg?w=1380&t=st=1697348965~exp=1697349565~hmac=b1669bdd3ea539ce57fc744ecea0627739d5064ce8ba5a27b85946b000f7be49')" }}
                 >

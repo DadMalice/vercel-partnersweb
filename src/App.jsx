@@ -1,4 +1,3 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Navbar from './components/Header/NavBar';
 import Home from './pages/1.Home/Home';
