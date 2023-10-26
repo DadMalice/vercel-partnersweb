@@ -8,23 +8,9 @@ const Terms = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <div className="relative mt-20 mx-10 pt-10 px-10">
-                <div className="sides">
-                    <a href="#" className="logo text-white text-xl font-bold">BLOG</a>
-                </div>
-                <div className="sides">
-                    <a href="#" className="menu"></a>
-                </div>
-                <div className="info text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                    <h4><a href="#category" className="text-blue-400">UI DESIGN</a></h4>
-                    <h1 className="text-3xl xl:text-4xl font-bold leading-snug">
-                        KEN BURNS HEADERS ARE THE BEST
-                    </h1>
-                    <div className="meta text-sm">
-                        <a href="https://twitter.com/nodws" target="_blank" className="author inline-block w-10 h-10 bg-cover bg-center rounded-full"></a><br />
-                        By <a href="https://twitter.com/nodws" target="_blank" className="text-blue-400">James Nodws</a> on May 30, 2019
-                    </div>
-                </div>
+            <div className='mt-20 mb-5 mx-10 pt-20 pb-5 px-10'>
+                <h1>Terms</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates aperiam delectus, fuga ad quidem ab sit accusantium qui tempora odio, facere doloremque. Molestias animi, praesentium officiis sequi nobis natus eius pariatur velit cum, et, sed reiciendis dicta ipsum doloremque illum optio reprehenderit temporibus! Aspernatur odio dolorum blanditiis cumque quisquam id illo, voluptates, quibusdam, necessitatibus quasi aperiam temporibus earum tempore veniam harum placeat explicabo corrupti amet ducimus ratione. Sequi, doloremque quasi minima possimus modi dolore similique! Commodi, quod totam. Possimus non doloremque consectetur mollitia, voluptas qui eaque perferendis maxime culpa ad neque aut, expedita ex! Quam tempora earum fugiat maxime nam.</p>
             </div>
         </motion.div>
     )

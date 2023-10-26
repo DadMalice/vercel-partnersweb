@@ -74,29 +74,37 @@ const Navbar = () => {
                     )}
                 </a>
                 <div className={`flex px-5 xl:px-12 pt-1 pb-4 w-full items-center`}>
-                    <img className="h-12 mr-3" src={partnersP} alt="Partners Hospice Quality Care LLC" />
+                    <img className="h-auto xs:h-12 mr-3" src={partnersP} alt="Partners Hospice Quality Care LLC" />
                     <ul className="hidden md:flex px-4 mt-5 font-semibold font-heading space-x-5">
                         <li>
-                            <Link className="hover:text-green-800" to="home-section" spy={true} smooth={true} offset={-100} duration={500} style={{ cursor: 'pointer' }}>Home</Link>
+                            <a className="hover:text-green-800" href="/">
+                                Home
+                            </a>
                         </li>
                         <li>
-                            <Link className="hover:text-green-800" to="about-section" spy={true} smooth={true} offset={-100} duration={500} style={{ cursor: 'pointer' }}>About</Link>
+                            <a className="hover:text-green-800" href="/about">
+                                About
+                            </a>
                         </li>
                         <li>
-                            <Link className="hover:text-green-800" to="services-section" spy={true} smooth={true} offset={-100} duration={500} style={{ cursor: 'pointer' }}>Services</Link>
+                            <a className="hover:text-green-800" href="/services">
+                                Services
+                            </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="#">
+                            <a className="hover:text-green-800" href="/faqs">
                                 FAQs
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="#">
+                            <a className="hover:text-green-800" href="/testimonials">
                                 Testimonials
                             </a>
                         </li>
                         <li>
-                            <Link className="hover:text-green-800" to="contactform-section" spy={true} smooth={true} offset={50} duration={500} style={{ cursor: 'pointer' }}>Contact</Link>
+                            <a className="hover:text-green-800" href="/contact">
+                                Contact
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -108,26 +116,34 @@ const Navbar = () => {
                 <div className="mobile-menu">
                     <ul className="md:hidden flex flex-col mb-4 px-4 mx-auto font-semibold font-heading space-y-3">
                         <li>
-                            <Link className="hover:text-green-800" to="home-section" spy={true} smooth={true} offset={-100} duration={500} style={{ cursor: 'pointer' }}>Home</Link>
+                            <a className="hover:text-green-800" href="/">
+                                Home
+                            </a>
                         </li>
                         <li>
-                            <Link className="hover:text-green-800" to="about-section" spy={true} smooth={true} offset={-100} duration={500} style={{ cursor: 'pointer' }}>About</Link>
+                            <a className="hover:text-green-800" href="/about">
+                                About
+                            </a>
                         </li>
                         <li>
-                            <Link className="hover:text-green-800" to="services-section" spy={true} smooth={true} offset={-100} duration={500} style={{ cursor: 'pointer' }}>Services</Link>
+                            <a className="hover:text-green-800" href="/services">
+                                Services
+                            </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="#">
+                            <a className="hover:text-green-800" href="/faqs">
                                 FAQs
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="#">
+                            <a className="hover:text-green-800" href="/testimonials">
                                 Testimonials
                             </a>
                         </li>
                         <li>
-                            <Link className="hover:text-green-800" to="contactform-section" spy={true} smooth={true} offset={50} duration={500} style={{ cursor: 'pointer' }}>Contact</Link>
+                            <a className="hover:text-green-800" href="/contact">
+                                Contact
+                            </a>
                         </li>
                     </ul>
                 </div>

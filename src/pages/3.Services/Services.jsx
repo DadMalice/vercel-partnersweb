@@ -16,20 +16,16 @@ const ServiceCard = ({ title, details, icon }) => {
 
 const Services = () => {
     return (
-        <section className="pt-20 pb-12 flex justify-center items-center">
+        <section className="pt-40 pb-12 flex justify-center items-center">
             <div className="container">
                 <div className="flex flex-wrap mx-4">
                     <div className="w-full px-4">
                         <div className="mx-auto mb-12 max-w-[510px] text-center">
-                            <span className="block mb-2 text-lg font-semibold text-primary">
+                            <h2 className="mb-4 text-4xl font-bold text-dark sm:text-5xl text-green-800">
                                 Our Services
-                            </span>
-                            <h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]">
-                                What We Offer
                             </h2>
-                            <p className="text-base text-body-color">
-                                There are many variations of passages of Lorem Ipsum available
-                                but the majority have suffered alteration in some form
+                            <p className="text-body-color">
+                                Partners Hospice Quality Care delivers symptom management, pain control, and a range of support services to patients and families in the comfort of their own homes.
                             </p>
                         </div>
                     </div>
@@ -48,16 +44,16 @@ const Services = () => {
                         details="Offers counseling for family members and provide resources for a variety of community services."
                     />
                     <ServiceCard
-                        title="Refreshing Design"
+                        title="Home health hospice aide"
+                        details="Attending to the patients' personal needs and homemaker services."
+                    />
+                    <ServiceCard
+                        title="Bereavement Counseling"
                         details="We dejoy working with discerning clients, people for whom quality, service, integrity & aesthetics."
                     />
                     <ServiceCard
-                        title="Refreshing Design"
-                        details="We dejoy working with discerning clients, people for whom quality, service, integrity & aesthetics."
-                    />
-                    <ServiceCard
-                        title="Refreshing Design"
-                        details="We dejoy working with discerning clients, people for whom quality, service, integrity & aesthetics."
+                        title="Respite care education"
+                        details="For maintaining a high standard of care and support for both families and the patient they assist."
                     />
                 </div>
             </div>
