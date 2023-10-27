@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import partnersP from '../../assets/Partners_P.png';
 import { BiCalendarCheck } from 'react-icons/bi';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const MOBILE_BREAKPOINT = 640;
 const MOBILE_BREAKPOINT2 = 768;
@@ -30,17 +30,25 @@ function DesktopView({ appointmentLink }) {
     );
 }
 
-
-
 const Navbar = () => {
-    const isMobileView = window.innerWidth <= MOBILE_BREAKPOINT;
-    const isTabletView = window.innerWidth <= MOBILE_BREAKPOINT2;
-
+    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= MOBILE_BREAKPOINT);
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobileView(window.innerWidth <= MOBILE_BREAKPOINT);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <div className={`navbar-container ${isMobileView ? '' : 'mt-10'}`}>
@@ -55,9 +63,9 @@ const Navbar = () => {
                             stroke="currentColor"
                         >
                             <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
                                 d="M6 18L18 6M6 6l12 12"
                             />
                         </svg>
@@ -69,7 +77,7 @@ const Navbar = () => {
                             viewBox="0 0 24 24"
                             stroke="currentColor"
                         >
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     )}
                 </a>
@@ -77,71 +85,71 @@ const Navbar = () => {
                     <img className="h-auto xs:h-12 mr-3" src={partnersP} alt="Partners Hospice Quality Care LLC" />
                     <ul className="hidden md:flex px-4 mt-5 font-semibold font-heading space-x-5">
                         <li>
-                            <a className="hover:text-green-800" href="/">
+                            <a className="hover:text-green-800" href="/#">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/about">
+                            <a className="hover:text-green-800" href="/#about">
                                 About
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/services">
+                            <a className="hover:text-green-800" href="/#services">
                                 Services
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/faqs">
+                            <a className="hover:text-green-800" href="/#faqs">
                                 FAQs
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/testimonials">
+                            <a className="hover:text-green-800" href="/#testimonials">
                                 Testimonials
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/contact">
+                            <a className="hover:text-green-800" href="/#contact">
                                 Contact
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div className={`flex pr-8 py-3 pb-4 w-auto justify-end`}>
-                    <DesktopView appointmentLink="/appointment-link" />
+                    <DesktopView appointmentLink="/#appointment-link" />
                 </div>
             </nav >
             {isMobileView && menuOpen && (
                 <div className="mobile-menu">
                     <ul className="md:hidden flex flex-col mb-4 px-4 mx-auto font-semibold font-heading space-y-3">
                         <li>
-                            <a className="hover:text-green-800" href="/">
+                            <a className="hover:text-green-800" href="/#">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/about">
+                            <a className="hover:text-green-800" href="/#about">
                                 About
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/services">
+                            <a className="hover:text-green-800" href="/#services">
                                 Services
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/faqs">
+                            <a className="hover:text-green-800" href="/#faqs">
                                 FAQs
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/testimonials">
+                            <a className="hover:text-green-800" href="/#testimonials">
                                 Testimonials
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/contact">
+                            <a className="hover:text-green-800" href="/#contact">
                                 Contact
                             </a>
                         </li>
