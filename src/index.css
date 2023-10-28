@@ -28,3 +28,7 @@
 .home {
     overflow-y: auto;
 }
+
+.border {
+    border-width: 3px;
+}

@@ -3,7 +3,7 @@ import image1 from '../../assets/image1.jpg';
 
 function Hero() {
     return (
-        <div className="w-screen h-screen-1/2 text-white" style={{
+        <div className="w-screen h-screen text-white" style={{
             background: "radial-gradient(circle, rgba(34,197,94,1) 0%, rgba(22,101,52,1) 100%)"
         }}>
             <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
