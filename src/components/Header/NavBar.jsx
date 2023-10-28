@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import partnersP from '../../assets/Partners_P.png';
 import { BiCalendarCheck } from 'react-icons/bi';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const MOBILE_BREAKPOINT = 640;
 const MOBILE_BREAKPOINT1 = 768;
 const MOBILE_BREAKPOINT2 = 835;
+
 
 function MobileView({ appointmentLink }) {
     return (
@@ -31,7 +33,27 @@ function DesktopView({ appointmentLink }) {
     );
 }
 
+function getActiveLink(currentPath) {
+    // Define an array of paths you want to check for active status
+    const pathsToCheck = ['/about', '/services', '/contact'];
+
+    for (const path of pathsToCheck) {
+        if (currentPath.startsWith(path)) {
+            return path;
+        }
+    }
+
+    // If no match is found, return a default value (e.g., '/')
+    return '/';
+}
+
+
+
 const Navbar = () => {
+    const location = useLocation();
+    const currentPath = location.pathname;
+    const activeLink = getActiveLink(currentPath);
+
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= MOBILE_BREAKPOINT1);
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -83,27 +105,43 @@ const Navbar = () => {
                     )}
                 </a>
                 <div className={`flex px-5 xl:px-12 pt-1 pb-4 w-full items-center`}>
-                    <img className="h-auto xs:h-12 mr-3" src={partnersP} alt="Partners Hospice Quality Care LLC" />
-                    <ul className="hidden md:flex px-4 mt-5 font-semibold font-heading space-x-5">
+                    <img className="h-auto xs:h-12 mr-3 transition-transform transform hover:scale-125" src={partnersP} alt="Partners Hospice Quality Care LLC" />
+                    <ul className="hidden md:flex px-4 mt-5 text-xl font-semibold font-heading space-x-5">
                         <li>
-                            <a className="hover:text-green-800" href="/#">
+                            <NavLink
+                                to="/"
+                                exact  // Add the exact prop
+                                className={`nav-link ${activeLink === '/' ? 'active-link' : ''} hover:text-green-800`}
+                            >
                                 Home
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/#about">
+                            <NavLink
+                                to="/about"
+                                exact  // Add the exact prop
+                                className={`nav-link ${activeLink === '/about' ? 'active-link' : ''} hover:text-green-800`}
+                            >
                                 About
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/#services">
+                            <NavLink
+                                to="/services"
+                                exact  // Add the exact prop
+                                className={`nav-link ${activeLink === '/services' ? 'active-link' : ''} hover:text-green-800`}
+                            >
                                 Services
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/#contact">
+                            <NavLink
+                                to="/contact"
+                                exact  // Add the exact prop
+                                className={`nav-link ${activeLink === '/contact' ? 'active-link' : ''} hover:text-green-800`}
+                            >
                                 Contact Us
-                            </a>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
@@ -113,26 +151,42 @@ const Navbar = () => {
             </nav >
             {isMobileView && menuOpen && (
                 <div className="mobile-menu">
-                    <ul className="md:hidden flex flex-col mb-4 px-4 mx-auto font-semibold font-heading space-y-3">
+                    <ul className="md:hidden flex flex-col mb-4 px-4 mx-auto font-semibold font-heading text-xl space-y-3">
                         <li>
-                            <a className="hover:text-green-800" href="/#">
+                            <NavLink
+                                to="/"
+                                exact  // Add the exact prop
+                                className={`nav-link ${activeLink === '/' ? 'active-link' : ''} hover:text-green-800`}
+                            >
                                 Home
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/#about">
+                            <NavLink
+                                to="/about"
+                                exact  // Add the exact prop
+                                className={`nav-link ${activeLink === '/about' ? 'active-link' : ''} hover:text-green-800`}
+                            >
                                 About
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/#services">
+                            <NavLink
+                                to="/services"
+                                exact  // Add the exact prop
+                                className={`nav-link ${activeLink === '/services' ? 'active-link' : ''} hover:text-green-800`}
+                            >
                                 Services
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
-                            <a className="hover:text-green-800" href="/#contact">
+                            <NavLink
+                                to="/contact"
+                                exact  // Add the exact prop
+                                className={`nav-link ${activeLink === '/contact' ? 'active-link' : ''} hover:text-green-800`}
+                            >
                                 Contact Us
-                            </a>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

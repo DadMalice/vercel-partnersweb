@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 import herohands from '../../assets/hero-hands.jpg';
 import { BiHeart, BiBandAid, BiSmile } from "react-icons/bi";
 import ContactForm from '../../components/ContactForm';
 import Hero from '../1.Home/Hero';
 import FaqsAcc from '../1.Home/FaqsAccordion';
 import Testimonials from '../5.Testimonials/Testimonials';
+import hero1 from '../../assets/hero1.jpg';
 import image1 from '../../assets/image1.jpg';
 import image2 from '../../assets/image2.jpg';
 
@@ -33,7 +34,7 @@ const Home = () => {
                     <Hero />
                 </div>
 
-                <div id='about-section' className='grid gap-8 mx-6 lg:mx-28 lg:px-28 px-2 md:mb-5 pb-1 py-10 2xl:grid-cols-2 md:items-start md:text-left'>
+                <div id='about-section' className='grid gap-8 mx-6 lg:mx-28 lg:px-28 px-2 -mt-32 md:mb-5 pb-10 py-10 2xl:grid-cols-2 md:items-start md:text-left bg-white shadow-xl rounded-xl'>
                     <div className='order-last lg:mt-4 lg:order-first md:order-last xs:order-last flex items-center'>
                         <img
                             src={image1}
@@ -43,10 +44,10 @@ const Home = () => {
                     </div>
                     <div className='max-w md:max-l'>
                         <h1 className='mb-10 lg:mt-10 text-center md:text-center font-sans lg:text-5xl xs:text-3xl text-2xl font-bold tracking-tight text-gray-900'>Partners Hospice Quality Care</h1>
-                        <p className='text-justify mb-5 text-lg font-normal text-gray-800'>
+                        <p className='text-justify mx-4 mb-5 text-lg font-normal text-gray-800'>
                             <span className=''>Partners Hospice Quality Care LLC</span> is a California-licensed healthcare organization dedicated to delivering compassionate end-of-life support for individuals with terminal illnesses, as determined by their medical providers.
                         </p>
-                        <p className='text-justify text-lg font-normal text-gray-800'>
+                        <p className='text-justify mx-4 text-lg font-normal text-gray-800'>
                             At Partners Hospice Quality Care LLC, our unwavering commitment is to provide outstanding primary healthcare services rooted in establishing strong relationships and delivering individualized care.
                         </p>
                         <div className="flex justify-center mt-8">
