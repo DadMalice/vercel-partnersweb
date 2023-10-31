@@ -7,8 +7,8 @@ export default class Testimonials extends Component {
     render() {
         return (
             <div>
-                <div className="-mx-4 flex flex-wrap">
-                    <div className="w-full px-4">
+                <div className="flex flex-wrap">
+                    <div className="w-full mt-8 px-4">
                         <div className="mx-auto mb-[10px] max-w-[600px] text-center lg:-mb-2">
                             <span className="mb-2 block text-4xl text-green-800 font-sans font-semibold text-primary">
                                 Testimonials
@@ -26,32 +26,32 @@ export default class Testimonials extends Component {
                     showThumbs={false}
                     showStatus={false}
                     autoPlay={true}
-                    interval={6100}
+                    interval={8000}
                 >
-                    <div className="-pt-10">
-                        <div className="myCarousel">
-                            <p className="mb-24 xs:mb-16 lg:mb-10">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel repudiandae quaerat ad reprehenderit porro earum commodi voluptatem.
+                    <div className="">
+                        <div className="myCarousel rounded-xl">
+                            <p className="mb-0">
+                                Partners Hospice Quality Care made my journey easier. Their compassionate team provided excellent pain management and unwavering support. I couldn't have asked for better care during a difficult time.
                             </p>
-                            <h3 className="pt-4">Shirley Fultz</h3>
+                            <h3 className="pt-6">Sarah J.</h3>
                         </div>
                     </div>
 
                     <div>
-                        <div className="myCarousel">
-                            <p className="mb-24 xs:mb-16 lg:mb-10">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel repudiandae quaerat ad reprehenderit porro earum commodi voluptatem.
+                        <div className="myCarousel rounded-xl">
+                            <p className="mb-0">
+                                Partners Hospice Quality Care's commitment to preserving my wife's dignity and managing her pain was extraordinary. They made a challenging journey a bit easier with their kindness and expertise."
                             </p>
-                            <h3 className="pt-4">Shirley Fultz</h3>
+                            <h3 className="pt-6">Michael A.</h3>
                         </div>
                     </div>
 
                     <div>
-                        <div className="myCarousel">
-                            <p className="mb-24 xs:mb-16 lg:mb-10">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel repudiandae quaerat ad reprehenderit porro earum commodi voluptatem.
+                        <div className="myCarousel rounded-xl">
+                            <p className="mb-0">
+                                Partnering with Partners Hospice Quality Care was a blessing during my mother's end-of-life journey. Their team provided not only medical care but also emotional support, treating my mom with respect and value.
                             </p>
-                            <h3 className="pt-4">Shirley Fultz</h3>
+                            <h3 className="pt-6">Lisa M.</h3>
                         </div>
                     </div>
                 </Carousel>

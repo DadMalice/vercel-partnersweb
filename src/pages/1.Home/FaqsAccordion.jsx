@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Accordion = () => {
     return (
-        <section className="relative z-20 overflow-hidden pt-10 pb-4 lg:pt-[40px] lg:pb-[40px] rounded-lg bg-white">
+        <section className="relative z-20 overflow-hidden pt-10 pb-2 lg:pt-[20px] lg:pb-[40px] rounded-lg bg-white">
             <div className="container mx-auto">
                 <div className="-mx-4 flex flex-wrap">
                     <div className="w-full px-4">
@@ -10,13 +10,13 @@ const Accordion = () => {
                             <span className="mb-2 block text-4xl text-green-800 font-sans font-semibold text-primary">
                                 FAQs
                             </span>
-                            <h2 className="mb-2 text-3xl font-sans font-bold tracking-tight text-black text-dark md:text-5xl">
+                            <h2 className="mb-0 text-3xl font-sans font-bold tracking-tight text-black text-dark md:text-5xl">
                                 Any Questions? Look Here
                             </h2>
                         </div>
                     </div>
                 </div>
-                <div className="grid divide-y divide-neutral-200 w-10/12 mx-auto mt-8">
+                <div className="grid divide-y divide-neutral-200 w-10/12 mx-auto mt-4">
                     <div className="my-4">
                         <details className="group bg-green-800 p-5 rounded-xl">
                             <summary className="flex justify-between items-center font-medium cursor-pointer list-none">

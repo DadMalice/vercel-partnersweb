@@ -1,4 +1,10 @@
 import { motion } from 'framer-motion';
+import { Container } from 'postcss';
+
+const headStyle = {
+    background: "radial-gradient(circle, rgba(34,197,94,1) 0%, rgba(22,101,52,1) 100%)",
+    color: 'white',
+};
 
 const About = () => {
     return (
@@ -8,9 +14,15 @@ const About = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <div className='mt-20 mb-5 mx-10 pt-20 pb-5 px-10'>
-                <h1>ABOUT</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates aperiam delectus, fuga ad quidem ab sit accusantium qui tempora odio, facere doloremque. Molestias animi, praesentium officiis sequi nobis natus eius pariatur velit cum, et, sed reiciendis dicta ipsum doloremque illum optio reprehenderit temporibus! Aspernatur odio dolorum blanditiis cumque quisquam id illo, voluptates, quibusdam, necessitatibus quasi aperiam temporibus earum tempore veniam harum placeat explicabo corrupti amet ducimus ratione. Sequi, doloremque quasi minima possimus modi dolore similique! Commodi, quod totam. Possimus non doloremque consectetur mollitia, voluptas qui eaque perferendis maxime culpa ad neque aut, expedita ex! Quam tempora earum fugiat maxime nam.</p>
+            <div className='mt-24'>
+                <header className="m-0 p-10 relative" style={headStyle}>
+                    <div className="flex-col gap-1 w-full">
+                        <p className="pt-2 text-4xl font-bold text-dark sm:text-5xl text-center text-white">About Us</p>
+                        <p className="pt-4 text-lg text-center text-white">
+                            We are committed to providing heartfelt end-of-life assistance for individuals diagnosed with terminal illnesses by their healthcare professionals.
+                        </p>
+                    </div>
+                </header>
             </div>
         </motion.div>
     )

@@ -34,16 +34,16 @@ const Home = () => {
                     <Hero />
                 </div>
 
-                <div id='about-section' className='grid gap-8 mx-6 lg:mx-28 lg:px-28 px-2 -mt-32 md:mb-5 pb-10 py-10 2xl:grid-cols-2 md:items-start md:text-left bg-white shadow-xl rounded-xl'>
+                <div id='about-section' className='grid gap-8 mx-6 lg:mx-28 lg:px-28 px-2 -mt-24 md:mb-5 pb-10 py-10 2xl:grid-cols-2 md:items-start md:text-left bg-white shadow-xl rounded-xl'>
                     <div className='order-last lg:mt-4 lg:order-first md:order-last xs:order-last flex items-center'>
                         <img
-                            src={image1}
+                            src={hero1}
                             alt=''
                             className='w-full rounded-3xl h-auto md:h-auto lg:h-full'
                         />
                     </div>
                     <div className='max-w md:max-l'>
-                        <h1 className='mb-10 lg:mt-10 text-center md:text-center font-sans lg:text-5xl xs:text-3xl text-2xl font-bold tracking-tight text-gray-900'>Partners Hospice Quality Care</h1>
+                        <h1 className='mb-10 lg:mt-10 text-center md:text-center font-sans lg:text-5xl xs:text-4xl text-2xl font-bold tracking-tight text-gray-900'>Partners Hospice Quality Care</h1>
                         <p className='text-justify mx-4 mb-5 text-lg font-normal text-gray-800'>
                             <span className=''>Partners Hospice Quality Care LLC</span> is a California-licensed healthcare organization dedicated to delivering compassionate end-of-life support for individuals with terminal illnesses, as determined by their medical providers.
                         </p>
@@ -134,13 +134,12 @@ const Home = () => {
                     </div>
 
                 </div>
-
-                <div id='faqs-section' className='pt-8'>
-                    <FaqsAcc />
+                <div id='testimonials-section' className='mt-4'>
+                    <Testimonials />
                 </div>
 
-                <div id='testimonials-section' className='pt-4'>
-                    <Testimonials />
+                <div id='faqs-section' className='mt-2'>
+                    <FaqsAcc />
                 </div>
 
                 <div id="contactform-section" className="relative bg-cover bg-center bg-image-url mt-14 p-5 md:p-10" style={containerStyle}>
