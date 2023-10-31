@@ -125,7 +125,7 @@ const Home = () => {
                         </ul>
 
                         <div className="flex justify-center mt-6">
-                            <Link to="/about" target="_blank">
+                            <Link to="/services" target="_blank">
                                 <button type="button" className="rounded border-2 border-green-800 px-[46px] pt-[14px] pb-[12px] text-sm font-medium uppercase leading-normal text-black transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-green-700 hover:bg-opacity-50 hover:text-green-800 focus:border-black focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 transform hover:scale-105" data-te-ripple-init data-te-ripple-color="light">
                                     Learn more about our services!
                                 </button>
