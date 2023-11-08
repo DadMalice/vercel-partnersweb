@@ -9,9 +9,9 @@ function Footer() {
                 </h2>
                 <div className="mt-2 pt-2 xl:pt-8">
                     <nav className="flex flex-wrap justify-center text-lg font-medium">
-                        <div className="px-5 py-2"><a href="#">Contact Us</a></div>
-                        <div className="px-5 py-2"><a href="#">Privacy Policy</a></div>
-                        <div className="px-5 py-2"><a href="/#terms">Terms and Conditions</a></div>
+                        <div className="px-5 py-2"><a href="/contact">Contact Us</a></div>
+                        <div className="px-5 py-2"><a href="/privacy">Privacy Policy</a></div>
+                        <div className="px-5 py-2"><a href="/terms">Terms and Conditions</a></div>
                     </nav>
                     <p className="mt-5 text-base">© 2023 Partners Hospice Quality Care, LLC</p>
                 </div>

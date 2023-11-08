@@ -10,7 +10,7 @@ const Accordion = () => {
                             <span className="mb-2 block text-4xl text-green-800 font-sans font-semibold text-primary">
                                 FAQs
                             </span>
-                            <h2 className="mb-0 text-3xl font-sans font-bold tracking-tight text-black text-dark md:text-5xl">
+                            <h2 className="mb-0 text-2xl font-sans font-bold tracking-tight text-black text-dark md:text-5xl">
                                 Any Questions? Look Here
                             </h2>
                         </div>

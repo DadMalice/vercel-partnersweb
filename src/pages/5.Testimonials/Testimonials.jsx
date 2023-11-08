@@ -13,7 +13,7 @@ export default class Testimonials extends Component {
                             <span className="mb-2 block text-4xl text-green-800 font-sans font-semibold text-primary">
                                 Testimonials
                             </span>
-                            <h2 className="mb-2 text-3xl font-sans font-bold tracking-tight text-black text-dark md:text-5xl">
+                            <h2 className="mb-2 text-2xl font-sans font-bold tracking-tight text-black text-dark md:text-5xl">
                                 Patients and Families say...
                             </h2>
                         </div>

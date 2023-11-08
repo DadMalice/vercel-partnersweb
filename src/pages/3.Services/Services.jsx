@@ -9,7 +9,7 @@ import s6 from '../../assets/s6.jpg';
 
 const ServiceCard = ({ title, details, image }) => {
     return (
-        <div className="block w-full md:w-1/2 lg:w-1/3 p-4 my-4 rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+        <div className="block m-0 w-full md:w-1/2 lg:w-1/3 p-4 my-1 rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
             <div className="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
                 <img className="rounded-t-lg w-full" src={image} alt="" />
             </div>
@@ -38,8 +38,8 @@ const Services = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <div className='mt-24'>
-                <header className="m-0 p-10 relative" style={headStyle}>
+            <div className="animated-gradient-background-header mt-24">
+                <header className="m-0 p-10 relative">
                     <div className="flex-col gap-1 w-full">
                         <p className="pt-2 text-4xl font-bold text-dark sm:text-5xl text-center text-white">Our Services</p>
                         <p className="pt-4 text-lg text-center text-white">
@@ -48,11 +48,12 @@ const Services = () => {
                     </div>
                 </header>
             </div>
-            <div className='max-w md:max-l m-8 md:mx-28 md:px-28'>
-                <p className='text-justify mb-5 text-lg md:text-2xl font-bold font-sans text-black'>
-                    <span className="text-green-800">Partners Hospice Quality Care</span> offers a range of services to patients and their families, providing compassionate and comprehensive care. Our services include:
+            <div className='max-w md:max-l m-8 xl:mx-28 xl:px-28'>
+                <p className='text-justify mb-2 font-sans text-lg font-normal text-gray-800'>
+                    <span className="text-green-800 font-semibold">Partners Hospice Quality Care</span> offers a range of services to patients and their families, providing compassionate and comprehensive care.
                 </p>
-                <ul className="list-disc ml-6 text-lg md:text-2xl md:mx-10 font-normal font-sans text-gray-800">
+                <p className="font-sans mb-2 text-lg font-bold text-gray-800">Our services include:</p>
+                <ul className="list-disc ml-6 text-lg md:mx-10 font-normal font-sans text-gray-800">
                     <li className="mb-4">
                         <strong className="text-green-800">Hospice Care:</strong> We provide specialized care to individuals who are facing a terminal illness and have a life expectancy of six months or less.
                     </li>
@@ -66,7 +67,7 @@ const Services = () => {
             </div>
             <div className="flex justify-center items-center">
                 <div className="container">
-                    <div className="flex flex-wrap mx-4">
+                    <div className="flex flex-wrap m-1">
                         <ServiceCard
                             image={s1}
                             title="Hospice Medical Director"
