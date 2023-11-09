@@ -30,10 +30,10 @@ const Home = () => {
         animate: {
             opacity: 1,
             x: 0,
-        },
-        transition: {
-            duration: 1,
-            ease: [0, 0.71, 0.2, 1.01]
+            transition: {
+                duration: 1,
+                ease: [0, 0.71, 0.2, 1.01]
+            },
         },
     }
 
@@ -45,11 +45,11 @@ const Home = () => {
         animate: {
             opacity: 1,
             y: 0,
-        },
-        transition: {
-            duration: 1,
-            delay: 1,
-            ease: [0, 0.71, 0.2, 1.01]
+            transition: {
+                duration: 1,
+                delay: 1,
+                ease: [0, 0.71, 0.2, 1.01]
+            },
         },
     }
 
@@ -59,11 +59,11 @@ const Home = () => {
         },
         animate: {
             opacity: 1,
-        },
-        transition: {
-            duration: 1,
-            delay: 1,
-            ease: [0, 0.71, 0.2, 1.01]
+            transition: {
+                duration: 1,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01]
+            },
         },
     }
 
@@ -75,11 +75,11 @@ const Home = () => {
         animate: {
             opacity: 1,
             x: 0,
-        },
-        transition: {
-            duration: 1,
-            delay: 1,
-            ease: [0, 0.71, 0.2, 1.01]
+            transition: {
+                duration: 1,
+                delay: 1,
+                ease: [0, 0.71, 0.2, 1.01]
+            },
         },
     }
 
@@ -96,35 +96,48 @@ const Home = () => {
                 }}
                 exit={{ opacity: 0 }}
             >
-                <div id='hero-section'>
-                    <Hero />
-                </div>
-
-                <div id='about-section' className='grid gap-8 mx-6 lg:mx-28 lg:px-28 px-2 -mt-24 md:mb-5 pb-10 py-10 2xl:grid-cols-2 md:items-start md:text-left bg-white shadow-xl rounded-xl'>
-                    <div className='order-last lg:mt-4 lg:order-first md:order-last xs:order-last flex items-center'>
-                        <img
-                            src={hero1}
-                            alt=''
-                            className='w-full rounded-3xl h-auto md:h-auto lg:h-full'
-                        />
+                <motion.div
+                    variants={fadeInAnimationsVariantC}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true, }}
+                >
+                    <div id='hero-section'>
+                        <Hero />
                     </div>
-                    <div className='max-w md:max-l'>
-                        <h1 className='mb-10 mx-2 lg:mt-10 text-center md:text-center font-sans lg:text-5xl xs:text-4xl text-4xl font-bold tracking-tight text-gray-900'>Partners Hospice Quality Care</h1>
-                        <p className='text-justify mx-5 mb-5 text-lg font-normal text-gray-800'>
-                            <span className=''>Partners Hospice Quality Care LLC</span> is a California-licensed healthcare organization dedicated to delivering compassionate end-of-life support for individuals with terminal illnesses, as determined by their medical providers.
-                        </p>
-                        <p className='text-justify mx-4 text-lg font-normal text-gray-800'>
-                            At Partners Hospice Quality Care LLC, our unwavering commitment is to provide outstanding primary healthcare services rooted in establishing strong relationships and delivering individualized care.
-                        </p>
-                        <div className="flex justify-center mt-8">
-                            <Link to="/about" target="_blank">
-                                <button class="text-sm font-medium uppercase leading-normal border-2 border-green-800 px-[46px] pt-[14px] pb-[12px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-black">
-                                    Learn more about us!
-                                </button>
-                            </Link>
+                </motion.div>
+                <motion.div
+                    variants={fadeInAnimationsVariantB}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true, }}
+                >
+                    <div id='about-section' className='grid gap-8 mx-6 lg:mx-28 lg:px-28 px-2 -mt-24 md:mb-5 pb-10 py-10 2xl:grid-cols-2 md:items-start md:text-left bg-white shadow-xl rounded-xl'>
+                        <div className='order-last lg:mt-4 lg:order-first md:order-last xs:order-last flex items-center'>
+                            <img
+                                src={hero1}
+                                alt=''
+                                className='w-full rounded-3xl h-auto md:h-auto lg:h-full'
+                            />
+                        </div>
+                        <div className='max-w md:max-l'>
+                            <h1 className='mb-10 mx-2 lg:mt-10 text-center md:text-center font-sans lg:text-5xl xs:text-4xl text-4xl font-bold tracking-tight text-gray-900'>Partners Hospice Quality Care</h1>
+                            <p className='text-justify mx-5 mb-5 text-lg font-normal text-gray-800'>
+                                <span className=''>Partners Hospice Quality Care LLC</span> is a California-licensed healthcare organization dedicated to delivering compassionate end-of-life support for individuals with terminal illnesses, as determined by their medical providers.
+                            </p>
+                            <p className='text-justify mx-4 text-lg font-normal text-gray-800'>
+                                At Partners Hospice Quality Care LLC, our unwavering commitment is to provide outstanding primary healthcare services rooted in establishing strong relationships and delivering individualized care.
+                            </p>
+                            <div className="flex justify-center mt-8">
+                                <Link to="/about" target="_blank">
+                                    <button class="text-sm font-medium uppercase leading-normal border-2 border-green-800 px-[46px] pt-[14px] pb-[12px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-black">
+                                        Learn more about us!
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
                 <motion.div
                     variants={fadeInAnimationsVariantA}
