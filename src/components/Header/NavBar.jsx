@@ -76,7 +76,7 @@ const Navbar = () => {
     return (
         <div className={`navbar-container ${isMobileView ? '' : 'mt-10'}`}>
             <nav className="flex justify-between bg-white text-black w-screen">
-                <a className="navbar-burger flex self-center ml-10 md:hidden" onClick={toggleMenu}>
+                <a className="flex self-center ml-10 md:hidden" onClick={toggleMenu}>
                     {menuOpen ? (
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
