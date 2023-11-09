@@ -151,7 +151,7 @@ const Navbar = () => {
             </nav >
             {isMobileView && menuOpen && (
                 <div className="mobile-menu">
-                    <ul className="md:hidden flex flex-col mb-4 px-4 mx-auto font-semibold font-heading text-xl space-y-3">
+                    <ul className="md:hidden flex flex-col mb-4 py-4 px-4 mx-auto font-semibold font-heading text-xl space-y-5">
                         <li>
                             <NavLink
                                 to="/"
