@@ -110,7 +110,7 @@ const Navbar = () => {
                         <li>
                             <NavLink
                                 to="/"
-                                exact  // Add the exact prop
+                                exact
                                 className={`nav-link ${activeLink === '/' ? 'active-link' : ''} hover:text-green-800`}
                             >
                                 Home
@@ -119,7 +119,7 @@ const Navbar = () => {
                         <li>
                             <NavLink
                                 to="/about"
-                                exact  // Add the exact prop
+                                exact
                                 className={`nav-link ${activeLink === '/about' ? 'active-link' : ''} hover:text-green-800`}
                             >
                                 About
@@ -128,7 +128,7 @@ const Navbar = () => {
                         <li>
                             <NavLink
                                 to="/services"
-                                exact  // Add the exact prop
+                                exact
                                 className={`nav-link ${activeLink === '/services' ? 'active-link' : ''} hover:text-green-800`}
                             >
                                 Services
@@ -137,7 +137,7 @@ const Navbar = () => {
                         <li>
                             <NavLink
                                 to="/contact"
-                                exact  // Add the exact prop
+                                exact
                                 className={`nav-link ${activeLink === '/contact' ? 'active-link' : ''} hover:text-green-800`}
                             >
                                 Contact Us
@@ -155,7 +155,7 @@ const Navbar = () => {
                         <li>
                             <NavLink
                                 to="/"
-                                exact  // Add the exact prop
+                                exact
                                 className={`nav-link ${activeLink === '/' ? 'active-link' : ''} hover:text-green-800`}
                             >
                                 Home
@@ -164,7 +164,7 @@ const Navbar = () => {
                         <li>
                             <NavLink
                                 to="/about"
-                                exact  // Add the exact prop
+                                exact
                                 className={`nav-link ${activeLink === '/about' ? 'active-link' : ''} hover:text-green-800`}
                             >
                                 About
@@ -173,7 +173,7 @@ const Navbar = () => {
                         <li>
                             <NavLink
                                 to="/services"
-                                exact  // Add the exact prop
+                                exact
                                 className={`nav-link ${activeLink === '/services' ? 'active-link' : ''} hover:text-green-800`}
                             >
                                 Services
@@ -182,7 +182,7 @@ const Navbar = () => {
                         <li>
                             <NavLink
                                 to="/contact"
-                                exact  // Add the exact prop
+                                exact
                                 className={`nav-link ${activeLink === '/contact' ? 'active-link' : ''} hover:text-green-800`}
                             >
                                 Contact Us
