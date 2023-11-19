@@ -1,25 +1,25 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 function ContactForm() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        tel: "",
-    });
+    const form = useRef();
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
-    };
-
-    const handleSubmit = (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
-        // You can handle form submission here
-        console.log("Form submitted with data:", formData);
-    };
+
+        emailjs.sendForm('service_02psnek', 'template_5oi17lv', form.current, '_ibLEOO_fJCl2wPtg')
+            .then((result) => {
+                console.log(result.text);
+                alert("This is a pop-up message!");
+                console.log("message sent");
+                setTimeout(() => {
+                    window.location.reload();
+                }, 5000);
+            })
+            .catch((error) => {
+                console.log(error.text);
+            });
+    }
 
     return (
         <div className="relative flex items-top justify-center bg-green-800 bg-opacity-90 sm:items-center sm:pt-0 sm:mx-20 sm:my-10 rounded-xl">
@@ -108,55 +108,43 @@ function ContactForm() {
                             </div>
                         </div>
 
-                        <form className="p-6 flex flex-col justify-center" onSubmit={handleSubmit}>
+                        <form ref={form} className="p-6 flex flex-col justify-center" onSubmit={sendEmail}>
                             <div className="flex flex-col">
-                                <label htmlFor="name" className="hidden">
+                                <label className="hidden">
                                     Full Name
                                 </label>
                                 <input
                                     type="text"
-                                    name="name"
-                                    id="name"
+                                    name="user_name"
                                     placeholder="Full Name"
-                                    value={formData.name}
-                                    onChange={handleChange}
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 dark:border-gray-700 text-black 
                                     font-semibold focus:border-green-400 focus:outline-none"
                                 />
                             </div>
-
                             <div className="flex flex-col mt-2">
                                 <label htmlFor="email" className="hidden">
                                     Email
                                 </label>
                                 <input
                                     type="email"
-                                    name="email"
-                                    id="email"
+                                    name="user_email"
                                     placeholder="Email"
-                                    value={formData.email}
-                                    onChange={handleChange}
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 dark:border-gray-700 text-black 
                                     font-semibold focus:border-green-400 focus:outline-none"
                                 />
                             </div>
-
                             <div className="flex flex-col mt-2">
                                 <label htmlFor="tel" className="hidden">
                                     Number
                                 </label>
                                 <input
                                     type="tel"
-                                    name="tel"
-                                    id="tel"
+                                    name="user_contact"
                                     placeholder="Telephone Number"
-                                    value={formData.tel}
-                                    onChange={handleChange}
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 dark:border-gray-700 text-black 
                                     font-semibold focus:border-green-400 focus:outline-none"
                                 />
                             </div>
-
                             <button
                                 type="submit"
                                 className="w-1/2 mx-auto text-center rounded-xl border-2 mt-8 border-green-800 bg-white px-[46px] pt-[14px] pb-[12px] text-sm font-medium uppercase leading-normal text-black transition duration-150 ease-in-out hover:border-neutral-100 hover:text-green-800 focus:border-black focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 transform hover:scale-105" data-te-ripple-init data-te-ripple-color="light">

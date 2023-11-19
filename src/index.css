@@ -70,6 +70,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.navbar-container.menu-open nav,
+.navbar-container.menu-open ul,
+.navbar-container.menu-open li {
+    transition: transform 0.8s ease-in-out;
+}
+
 .home {
     overflow-y: auto;
 }

@@ -32,6 +32,8 @@ export const ContactUs = () => {
                     <input type="text" name="user_name" className='peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none' />
                     <label>Email</label>
                     <input type="email" name="user_email" className='peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none' />
+                    <label>Phone Number</label>
+                    <input type="tel" name="user_number" className='peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none' />
                     <label>Message</label>
                     <textarea name="message" className='peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none mb-3' />
                     <button type="submit" className='mb-6 w-full rounded bg-green-800 text-white px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal lg:mb-0'>
