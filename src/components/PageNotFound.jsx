@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import undercons from '../assets/undercons.png';
+import undercons from '../assets/error.png';
+import { Link } from 'react-router-dom';
 
-const Terms = () => {
+function PageNotFound() {
     return (
         <motion.div
             className="terms"
@@ -17,11 +18,16 @@ const Terms = () => {
                         </div>
 
                         <h1 className="mt-5 mb-10 lg:text-5xl xs:text-3xl font-bold leading-tight text-white">
-                            Exciting updates are in progress!
+                            Sorry, we couldn't find this page.
                         </h1>
                         <p className="mb-5 text-base text-white md:text-lg text-center">
-                            Our terms page is currently undergoing improvements to better serve you. We appreciate your patience. For urgent inquiries, please contact us at <a href="tel:+15622457580" className="text-green-200"> (562) 245-7580</a>. Thank you for understanding!
+                            But dont worry, you can visit our homepage and know more about us!
                         </p>
+                        <button
+                            className="mx-auto text-center rounded-xl border-2 mt-2 border-green-800 bg-white px-[46px] pt-[14px] pb-[12px] text-sm font-medium uppercase leading-normal text-black transition duration-150 ease-in-out hover:border-neutral-100 hover:text-green-800 focus:border-black focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 transform hover:scale-105"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <Link to="/">Homepage</Link>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -29,4 +35,4 @@ const Terms = () => {
     )
 }
 
-export default Terms;
+export default PageNotFound

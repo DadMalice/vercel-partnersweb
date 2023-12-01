@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import undercons from '../assets/undercons.png';
 
-const Terms = () => {
+function Privacy() {
     return (
         <motion.div
             className="terms"
@@ -20,7 +20,7 @@ const Terms = () => {
                             Exciting updates are in progress!
                         </h1>
                         <p className="mb-5 text-base text-white md:text-lg text-center">
-                            Our terms page is currently undergoing improvements to better serve you. We appreciate your patience. For urgent inquiries, please contact us at <a href="tel:+15622457580" className="text-green-200"> (562) 245-7580</a>. Thank you for understanding!
+                            Our privacy page is currently undergoing improvements to better serve you. We appreciate your patience. For urgent inquiries, please contact us at <a href="tel:+15622457580" className="text-green-200"> (562) 245-7580</a>. Thank you for understanding!
                         </p>
                     </div>
                 </div>
@@ -29,4 +29,4 @@ const Terms = () => {
     )
 }
 
-export default Terms;
+export default Privacy;

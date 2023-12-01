@@ -101,18 +101,21 @@ const Home = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true, }}
+                    style={{ zIndex: -1 }}
                 >
-                    <div id='hero-section'>
+                    <div id='hero-section' style={{ zIndex: -1 }}>
                         <Hero />
                     </div>
                 </motion.div>
+
                 <motion.div
                     variants={fadeInAnimationsVariantB}
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true, }}
+                    style={{ zIndex: 1 }}
                 >
-                    <div id='about-section' className='grid gap-8 mx-6 lg:mx-28 lg:px-28 px-2 -mt-24 md:mb-5 pb-10 py-10 2xl:grid-cols-2 md:items-start md:text-left bg-white shadow-xl rounded-xl'>
+                    <div id='about-section' style={{ zIndex: 1 }} className='grid gap-8 mx-6 lg:mx-28 lg:px-28 px-2 -mt-20 md:mb-5 pb-10 py-10 2xl:grid-cols-2 md:items-start md:text-left bg-white shadow-xl rounded-xl'>
                         <div className='order-last lg:mt-4 lg:order-first md:order-last xs:order-last flex items-center'>
                             <img
                                 src={hero1}
@@ -129,7 +132,7 @@ const Home = () => {
                                 At Partners Hospice Quality Care LLC, our unwavering commitment is to provide outstanding primary healthcare services rooted in establishing strong relationships and delivering individualized care.
                             </p>
                             <div className="flex justify-center mt-8">
-                                <Link to="/about" target="_blank">
+                                <Link to="/about">
                                     <button class="text-sm font-medium uppercase leading-normal border-2 border-green-800 px-[46px] pt-[14px] pb-[12px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-black">
                                         Learn more about us!
                                     </button>
@@ -216,7 +219,7 @@ const Home = () => {
                             </ul>
 
                             <div className="flex justify-center mt-6">
-                                <Link to="/services" target="_blank">
+                                <Link to="/services">
                                     <button class="text-sm font-medium uppercase leading-normal border-2 border-green-800 px-[46px] pt-[14px] pb-[12px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-black">
                                         Learn more about our services!
                                     </button>

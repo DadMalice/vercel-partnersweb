@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import partnersP from '../../assets/Partners_P.png';
 import { BiCalendarCheck } from 'react-icons/bi';
 import { NavLink } from 'react-router-dom';
@@ -97,7 +98,13 @@ const Navbar = () => {
                     )}
                 </a>
                 <div className={`flex px-5 xl:px-12 pt-1 pb-4 w-full items-center`}>
-                    <img className="h-auto xs:h-12 mr-3 transition-transform transform hover:scale-125" src={partnersP} alt="Partners Hospice Quality Care LLC" />
+                    <Link to="/">
+                        <img
+                            className="h-auto xs:h-12 mr-3 transition-transform transform hover:scale-125"
+                            src={partnersP}
+                            alt="Partners Hospice Quality Care LLC"
+                        />
+                    </Link>
                     <ul className={`hidden md:flex px-4 mt-5 text-xl font-semibold font-heading space-x-5 ${menuOpen ? 'menu-open' : ''}`}>
                         <li>
                             <NavLink
