@@ -7,7 +7,7 @@ function ContactForm() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_02psnek', 'template_5oi17lv', form.current, '_ibLEOO_fJCl2wPtg')
+        emailjs.sendForm('service_vqcmup4', 'template_5oi17lv', form.current, 'hWCp2eJ6P9eS0BQym')
             .then((result) => {
                 console.log(result.text);
                 alert("This is a pop-up message!");
